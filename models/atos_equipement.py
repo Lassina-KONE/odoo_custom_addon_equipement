@@ -10,14 +10,14 @@ class AtosEquipement(models.Model):
 	serial_number = fields.Char('Numero de serie',required=True)
 	part_number = fields.Char('Numero de partition',required=True)
 	description = fields.Text("Description")
-	marque_id = fields.Many2one("atos_equipement_marque",string="Marque")
+	partner_id = fields.Many2one("res.partner",string="Fournisseur")
 	compatiment_id = fields.Many2one("atos_compatiment",string="Compatiment")
 	actif = fields.Boolean("Statut",default="True")
 	raison_de_sortie = fields.Text("Raison de sortie")
 	state = fields.Selection(
 		[
 			('in','En stock'),
-			('out','Sortie')
+			('out','Sorti')
 		],
 		default="in",
 		string="Etat"
