@@ -2,6 +2,7 @@
     'name': 'Stock Atos',
     'version': '1.0',
     'category': 'Inventory',
+    'author': 'Lassina KONE',
     'description': "",
     'data': [
         'security/ir.model.access.csv',
